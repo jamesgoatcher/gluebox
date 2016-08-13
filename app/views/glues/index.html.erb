@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="index_container">
+	<div id="glues_index-divBlock">
+		<a href="/glues/new">Write a new glue</a>
+		<div class="glues_index-singleDiv">
+			<% @glues.each do |each_glue| %>
+			<h3><%= each_glue.user %></h3>
+			<p><%= each_glue.created_at.to_formatted_s(:long_ordinal) %></p>
+			<p><a class="index_a" href="/glues/<%= each_glue.id %>"><%= simple_format(each_glue.content) %></a></p>
+		<% end %>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.index_container {
+	margin: 0 auto;
+	max-width: 920px;
+	padding: 1em 0;
+}
+
+#index_div {
+	background: #aaa;
+	display: block;
+	width: 300px;
+	text-align: center;
+}
+
+.index_p {
+	text-align: left;
+}
+
+.index_navbar {
+	text-decoration: none;
+	font-size: 30px;
+}
+
+.glue_content {
+	font-family: monospace;
+	font-size: 1em;
+}
+
+#glues_index-divBlock {
+	display: block;
+	background: #aaa;
+}
+
+.glues_index-singleDiv {
+	display: inline-block;
+	background: #eee;
+	font-family: monospace;
+}
+
+.index_a {
+	text-decoration: none;
+	color: #222
+}

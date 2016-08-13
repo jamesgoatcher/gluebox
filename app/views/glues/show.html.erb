@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Show</h1>
+	<ul>
+		<li>User: <%= @glue.user %></li>
+		<li>Content: <%= simple_format(@glue.content) %></li>
+	</ul>
+	<br>
+	<%= link_to "Edit #{@glue.title}", edit_glue_path(@glue) %>
+	<br>
+	<%= link_to "Delete", glue_path(@glue), method: :delete, data: {confirm: "Are you sure?"} %>
+</body>
+</html>
