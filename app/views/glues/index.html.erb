@@ -1,21 +1,43 @@
 <html>
 <head>
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro" rel="stylesheet">
+	<title>GlueBox - Simplified Cut and Paste</title>
 </head>
 <body>
-
-<div class="index_container">
-	<div id="glues_index-divBlock">
-		<a href="/glues/new">Write a new glue</a>
-		<div class="glues_index-singleDiv">
-			<% @glues.each do |each_glue| %>
-			<h3><%= each_glue.user %></h3>
-			<p><%= each_glue.created_at.to_formatted_s(:long_ordinal) %></p>
-			<p><a class="index_a" href="/glues/<%= each_glue.id %>"><%= simple_format(each_glue.content) %></a></p>
-		<% end %>
+	<header>
+		<div id="index_header-div">
+			<a href="/">
+				<img class="index_img" src="<%= image_url('copy.png') %>">
+				<h1 id="index_h1">GLUEBOX</h1>
+				<img class="index_img" src="<%= image_url('paste.png') %>">
+			</a>
 		</div>
-	</div>
-</div>
+	</header>
+	<main>
+		<div class="index_container">
 
+			<div id="index_glues_new">
+				<h2 id="index_glues_new-h2">NEW GLUE</h2>
+				<%= form_for @glue do |form| %>
+					<%= form.hidden_field :user, :value=> 'Anonymous' %>
+					<span class="index_glues_new-input"><%= form.text_field :title, placeholder: "Title" %></span>
+					<span class="index_glues_new-input"><%= form.text_area :content, cols: 100, rows: 18, placeholder: "Content" %></span>
+					<%= form.submit 'GLUE', :class=> 'index_glues_new-submit' %>
+				<% end %>
+			</div>
+
+			<div class="index_glues_div">
+				<table id="index_glues_table">
+					<th>TITLE</th>
+					<th>POSTED</th>
+					<% @glues.each do |each_glue| %>
+					<tr><td><a class="index_a" href="/glues/<%= each_glue.id %>"><%= simple_format(each_glue.title) %></a></td><td><%= each_glue.created_at.to_formatted_s(:long_ordinal) %></td></tr>
+					<% end %>
+				</table>
+			</div>
+			
+		</div>
+	</main>
 </body>
 </html>

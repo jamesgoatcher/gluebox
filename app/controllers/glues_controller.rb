@@ -12,7 +12,7 @@ class GluesController < ApplicationController
 			puts "======================================"
 		end
 
-		@test  = "test test testing"
+		@glue  = Glue.new
 		@glues = Glue.all
 
 	end

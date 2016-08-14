@@ -6,7 +6,7 @@
 	<%= form_for @glue do |form| %>
 		<h2>New Glue</h2>
 		<%= form.hidden_field :user, :value=> 'Anonymous' %>
-		<%= form.hidden_field :title, :value=> nil %>
+		<%= form.text_field :title %>
 		<%= form.text_area :content, cols: 100, rows: 18 %><br>
 		<%= form.submit %>
 	<% end %>
