@@ -7,6 +7,8 @@ html, body {
 	height: 100%;
 }
 
+/*INDEX (Glues)*/
+
 #index_header-div {
 	display: block;
 	text-align: center;
@@ -52,13 +54,17 @@ html, body {
 	display: block;
 }
 
-#index_glues_new-h2 {
+.index_glues_new-h2 {
 	margin: 0;
+	padding-top: 10px;
+	font-size: 16px;
+	color: #000;
 }
 
 .index_glues_new-input {
 	display: block;
 	margin: 10px 0;
+	font-size: 16px;
 }
 
 .index_glues_new-submit {
@@ -73,19 +79,62 @@ html, body {
 
 .index_glues_div {
 	display: block;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+#index_glues_notice {
+	display: block;
+	border: 1px solid #E6E6E4;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 20px 0;
+	border-left: 10px solid #E6E6E4;
+	font-size: 12px;
 }
 
 #index_glues_table {
 	text-align: left;
+	width: 100%;
 }
 
-.glues_index-singleDiv {
-	display: inline-block;
-	background: #eee;
-	font-family: 'Source Code Pro', monospace;
+.index_glues_td-1 {
+	width: 70%;
+}
+
+th, td {
+	border-bottom: 1px solid #E6E6E4;
+}
+
+tr:nth-of-type(n+2):hover {
+	background: #F2F2F1;
 }
 
 .index_a {
 	text-decoration: none;
-	color: #222
+	color: #444;
+}
+
+.index_a:hover {
+	color: #184D71;
+}
+
+p {
+	margin: 0;
+	padding: 10px 0;
+}
+
+/*SITE WIDE*/
+
+.inline-block {
+	display: inline-block;
+}
+
+.relative {
+	position: relative;
+	margin-right: 10px;
+}
+
+.inline-block p {
+	padding: 5px 0;
 }
