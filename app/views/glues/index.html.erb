@@ -21,8 +21,8 @@
 				<h2 class="index_glues_new-h2">NEW GLUE</h2>
 				<%= form_for @glue do |form| %>
 					<%= form.hidden_field :user, :value=> 'Anonymous' %>
-					<span class="index_glues_new-input"><%= form.text_field :title, placeholder: "Title", :size => 80 %></span>
-					<span class="index_glues_new-input"><%= form.text_area :content, cols: 125, rows: 18, placeholder: "Content" %></span>
+					<span class="index_glues_new-input"><%= form.text_field :title, :class => 'text-input', placeholder: "Title", :size => 59 %></span>
+					<span class="index_glues_new-input"><%= form.text_area :content, cols: 87, rows: 18, :class => 'text-input', placeholder: "Content" %></span>
 					<%= form.submit 'GLUE', :class=> 'index_glues_new-submit' %>
 				<% end %>
 			</div>
