@@ -1,16 +1,46 @@
 <html>
 <head>
-	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Code+Pro" rel="stylesheet">
 </head>
 <body>
-	<h1>Show</h1>
-	<ul>
-		<li>User: <%= @glue.user %></li>
-		<li>Content: <%= simple_format(@glue.content) %></li>
-	</ul>
-	<br>
-	<%= link_to "Edit #{@glue.title}", edit_glue_path(@glue) %>
-	<br>
-	<%= link_to "Delete", glue_path(@glue), method: :delete, data: {confirm: "Are you sure?"} %>
+	<header>
+		<div class="index_header-div">
+			<a href="/">
+				<img class="index_img" src="<%= image_url('copy.png') %>">
+				<h1 class="index_h1">GLUEBOX</h1>
+				<img class="index_img" src="<%= image_url('paste.png') %>">
+			</a>
+		</div>
+	</header>
+
+	<div class="index_container">
+		<main>
+
+			<div class="index_glues_div">
+				<h2 class="index_glues_new-h2"><%= @glue.title %></h2>
+				<h3 class="show_glues-h3"><%= @glue.user %></h3>
+			</div>
+
+			<div class="show_glues_div-wrap">
+				<div class="show_glues-content-top">
+					<div id="show-left">
+						<%= number_to_human_size(@glue.content.size) %>
+					</div>
+					<div id="show-right">
+						<%= link_to "EDIT", edit_glue_path(@glue), :class=> 'show_div-links' %>
+						<%= link_to "DELETE", glue_path(@glue), :class=> 'show_div-links', method: :delete, data: {confirm: "Are you sure?"} %>
+					</div>
+				</div>
+				<div class="show_glues-content">
+					<%= simple_format(@glue.content) %>
+				</div>
+			</div>
+
+			<%= link_to "Return to Home", glues_path, :class=> 'show_div_a' %>
+
+		</main>
+	</div>
+
 </body>
 </html>

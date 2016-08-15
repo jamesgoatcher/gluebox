@@ -4,7 +4,7 @@ require 'clockwork'
 
 module Clockwork
 	every(10.seconds, 'delete.glue') {
-		@glues = Glue.where("created_at <= ?", 1.minutes.ago.utc)
+		@glues = Glue.where("updated_at <= ?", 1.minutes.ago.utc)
 		@glues.each do |glue|
 			glue.destroy
 		end
