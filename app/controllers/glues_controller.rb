@@ -44,7 +44,9 @@ class GluesController < ApplicationController
 	end
 
 	def edit
-		@glue = Glue.find(params[:id])
+		@glue   	 = Glue.find(params[:id])
+
+		@glue_edit = Glue.find(params[:id])
 	end
 
 	def update
