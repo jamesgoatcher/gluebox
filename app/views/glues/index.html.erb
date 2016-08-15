@@ -22,7 +22,7 @@
 				<%= form_for @glue do |form| %>
 					<%= form.hidden_field :user, :value=> 'Anonymous' %>
 					<span class="index_glues_new-input"><%= form.text_field :title, :class => 'text-input', placeholder: "Title", :size => 59 %></span>
-					<span class="index_glues_new-input"><%= form.text_area :content, cols: 87, rows: 18, :class => 'text-input', placeholder: "Content" %></span>
+					<span class="index_glues_new-input"><%= form.text_area :content, cols: 87, rows: 18, :class => 'text-area', placeholder: "Content" %></span>
 					<%= form.submit 'GLUE', :class=> 'index_glues_new-submit' %>
 				<% end %>
 			</div>
