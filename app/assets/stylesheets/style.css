@@ -54,6 +54,7 @@ header {
 	border-right: 1px solid #E6E6E4;
 	background: #fff;
 	height: 100%;
+	overflow: overlay;
 }
 
 #index_glues_new {
@@ -169,6 +170,7 @@ p {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 12px;
 	overflow: scroll;
+	background: #fff;
 }
 
 #show-left, #show-right {
