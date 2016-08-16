@@ -13,7 +13,7 @@ class GluesController < ApplicationController
 		end
 
 		@glue  = Glue.new
-		@glues = Glue.all
+		@glues = Glue.all.order('updated_at DESC')
 
 	end
 

@@ -45,7 +45,7 @@
 					<% @glues.each do |each_glue| %>
 					<tr>
 						<td class="index_glues_td-1"><a class="index_a" href="/glues/<%= each_glue.id %>"><%= simple_format(each_glue.title) %></a></td>
-						<td><%= each_glue.updated_at.to_formatted_s(:time) %></td>
+						<td><%= time_ago_in_words(each_glue.updated_at) %></td>
 					</tr>
 					<% end %>
 				</table>
