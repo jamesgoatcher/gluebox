@@ -1,28 +1,33 @@
-<<<<<<< HEAD
-# README
+# GLUEBOX
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## https://glue-box.herokuapp.com
 
-Things you may want to cover:
+### What if Pastebin and the Buddhist tenant of impermenence fused and were written as a Ruby on Rails app?
 
-* Ruby version
+/ / / / / / / / / / 
 
-* System dependencies
+## Languages and Frameworks
 
-* Configuration
+- Ruby
+- Rails
+- PostgreSQL
+- Cron
+- HTML/CSS
 
-* Database creation
+/ / / / / / / / / / 
 
-* Database initialization
+## Notable Features
 
-* How to run the test suite
+- Anonymous text dump that converts text to pseudo-plaintext postings
+- Posts are rendered immediately to the Gluebox but will dissolve within 10 minutes, unless updated, which effectively extends its life another 10 minutes
+- Any user can modify a previously written Glue and/or delete
+- Size of the entire glue is displayed on the show page, which will be helpful when the download feature is implemented
+- Ultra-minimal and effect UI engineering
 
-* Services (job queues, cache servers, search engines, etc.)
+====================
 
-* Deployment instructions
+## Future Releases
 
-* ...
-=======
-# gluebox
->>>>>>> 6cfdd6e2642b94cb7b38da76984fc8adc044dd95
+- Each line of code will be numbered
+- Indents and initial spacing will be properly rendered in show
+- User will be able to download glues as .txt files
