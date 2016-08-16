@@ -20,6 +20,7 @@
 			<div class="index_glues_div">
 				<h2 class="index_glues_new-h2"><%= @glue.title %></h2>
 				<h3 class="show_glues-h3"><%= @glue.user %></h3>
+				<h4 class="show_glues-h4"><%= @glue.updated_at.to_formatted_s(:long_ordinal) %></h4>
 			</div>
 
 			<div class="show_glues_div-wrap">
@@ -33,7 +34,7 @@
 					</div>
 				</div>
 				<div class="show_glues-content">
-					<%= simple_format(@glue.content) %>
+					<%= simple_format(h(@glue.content)) %>
 				</div>
 			</div>
 

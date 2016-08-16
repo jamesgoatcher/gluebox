@@ -140,6 +140,15 @@ p {
 	font-style: italic;
 }
 
+.show_glues-h4 {
+	font-weight: 300;
+	font-size: 10px;
+	margin: 0;
+	margin-bottom: 10px;
+	padding: 0;
+	color: #000;
+}
+
 .show_glues_div-wrap {
 	border: 1px solid #E6E6E4;
 }
