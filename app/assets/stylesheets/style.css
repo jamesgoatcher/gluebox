@@ -171,6 +171,7 @@ p {
 	font-size: 12px;
 	overflow: scroll;
 	background: #fff;
+	white-space: pre-wrap;
 }
 
 #show-left, #show-right {
